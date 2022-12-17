@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import bridge from '@vkontakte/vk-bridge';
 import { View, ScreenSpinner, AdaptivityProvider, AppRoot, ConfigProvider, SplitLayout, SplitCol } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
+import './popit.css';
 
 import Home from './panels/Home';
 import Persik from './panels/Persik';
@@ -32,20 +33,9 @@ const App = () => {
 	};
 
 	return (
-		<ConfigProvider scheme={scheme}>
-			<AdaptivityProvider>
-				<AppRoot>
-					<SplitLayout popout={popout}>
-						<SplitCol>
-							<View activePanel={activePanel}>
-								<Home id='home' fetchedUser={fetchedUser} go={go} />
-								<Persik id='persik' go={go} />
-							</View>
-						</SplitCol>
-					</SplitLayout>
-				</AppRoot>
-			</AdaptivityProvider>
-		</ConfigProvider>
+		<div>
+			<p className='popit'>popit</p>
+		</div>
 	);
 }
 
